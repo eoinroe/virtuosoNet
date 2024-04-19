@@ -1048,7 +1048,7 @@ elif args.sessMode in ['test', 'testAll', 'testAllzero', 'encode', 'encodeAll', 
         # model_codes = ['prime', 'trill']
         filename = 'prime_' + args.modelCode + args.resume
         print('device is ', args.device)
-        torch.cuda.set_device(args.device)
+        # torch.cuda.set_device(args.device)
         # if torch.cuda.is_available():
         #     map_location = lambda storage, loc: storage.cuda()
         # else:
