@@ -1049,10 +1049,11 @@ elif args.sessMode in ['test', 'testAll', 'testAllzero', 'encode', 'encodeAll', 
         filename = 'prime_' + args.modelCode + args.resume
         print('device is ', args.device)
         torch.cuda.set_device(args.device)
-        if torch.cuda.is_available():
-            map_location = lambda storage, loc: storage.cuda()
-        else:
-            map_location = 'cpu'
+        # if torch.cuda.is_available():
+        #     map_location = lambda storage, loc: storage.cuda()
+        # else:
+        #     map_location = 'cpu'
+        map_location = 'cpu'
         checkpoint = torch.load(filename, map_location=map_location)
         # args.start_epoch = checkpoint['epoch']
         # best_valid_loss = checkpoint['best_valid_loss']
